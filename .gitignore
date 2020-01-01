@@ -1,0 +1,12 @@
+/target/
+.classpath
+.project
+.settings/
+.DS_Store
+.idea/
+/.springBeans
+*.iml
+site-application.yml
+*.p12
+*.mp4
+*.pdf

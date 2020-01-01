@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Giannis Mitropoulos</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79898955-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-79898955-2');
+    </script>
+
+
+</head>
+
+<body>
+<div class="container container-fluid">
+    <div class="row">
+        <div class="col-sm-8 my-auto">
+            <p align="center">&nbsp;</p>
+
+            <p align="center"><font size="6px">Giannis Mitropoulos</font></p>
+            <h3>ML Enthusiast | Software Developer | Mechanical Engineer (M.Sc)</h3>
+            <p>
+                <br>
+            <hr>
+            <span style="display:block;font-size: 18px;margin-bottom: 8px">mitropoui@windowslive.com</span>
+            <a href="CV_Giannis_Mitropoulos.pdf" title="view CV">
+                <span style="font-weight: bold ; font-size: 18px;transform: translateY(1px);" class="fa">CV</span>
+            </a> |
+            <a href="https://www.linkedin.com/in/giannis-mitropoulos" title="LinkedIn" target="_blank">
+                <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+            </a> |
+            <a href="https://github.com/GiannisMitr" target="_blank" title="GitHub">
+                <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+            </a>
+
+            </p>
+        </div>
+        <div class="col-sm-4 my-auto order-first order-sm-last">
+            <div class="image-cropper">
+                <img src="images/pic_small.jpg" alt="avatar" class="profile-pic">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container container-fluid">
+    <h2> Projects </h2>
+    <div class="row justify-content-center projects">
+        <div class="col-md-6 col-sm-9 col-xs-9 text-center project">
+            <h3>Real Time Object Detection In The Browser
+                <a style="display:block; margin:5px ;font-weight: bold" href="object-detector.html">Try Live Demo!</a></h3>
+            <video autoplay loop muted playsinline src="videos/detector.mp4"
+                   style="border-style: none ; max-width:100%; height: auto">
+
+            </video>
+        </div>
+    </div>
+    <div class="projects row" style="padding-top: 5px">
+        <div class="col-md-12">
+            <div class="project">
+                <p>Runs inference in the browser using TensorFlow.js library
+                    and web camera images as input. Uses a <a href="https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd" target="_blank">COCO-SSD</a> model ported for TensorFlow.js.
+                    As an encoder it uses a lite version of <a href="https://ai.googleblog.com/2018/04/mobilenetv2-next-generation-of-on.html" target="_blank">MobileNetV2</a>
+                    and an <a href="https://arxiv.org/pdf/1512.02325.pdf" target="_blank">SSD</a> network (Single Shot Detector) as the decoder.
+                    The model outputs predictions for 90 classes of the <a href="http://cocodataset.org/#home" target="_blank">COCO</a> dataset
+                    and coordinates for the predicted boxes. You can view the code <a href="https://github.com/GiannisMitr/personal-site" target="_blank">here</a>.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center projects">
+        <div class="col-md-6 col-sm-9 col-xs-9 text-center project">
+            <h3>A DQN-Agent Learning Atari BreakOut </h3>
+            <img src="images/gif/dqn_atari.gif" alt="dqn playing atari"
+                 style="border-style: none ; width:150px ; margin-bottom: 5px">
+        </div>
+    </div>
+    <div class="projects row" style="padding-top: 5px">
+        <div class="col-md-12">
+            <div class="project">
+                <p>A Deep Q Network that implements an approximate q-learning algorithm with experience replay and
+                    target networks.
+                    Developed on TensorFlow using OpenAI Gym for the Atari environment,
+                    as part of the <a href="https://www.coursera.org/learn/practical-rl" target="_blank">Practical
+                        Reinforcement Learning</a> course on Coursera.</p>
+                DeepMind's Papers:
+                <a href="https://arxiv.org/pdf/1312.5602.pdf" target="_blank">1</a>,
+                <a href="https://arxiv.org/pdf/1509.06461.pdf" target="_blank">2</a>,
+                <a href="https://arxiv.org/pdf/1511.05952.pdf" target="_blank">3</a> |
+                <a href="https://colab.research.google.com/github/GiannisMitr/DQN-Atari-Breakout/blob/master/dqn_atari_breakout.ipynb"
+                   target="_blank">
+                    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+                </a> |
+                <a href="https://www.coursera.org/account/accomplishments/verify/QRAH2QPPG9FV" target="_blank">Certificate</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center projects">
+        <div class="col-md-6 col-sm-9 col-xs-9 text-center project">
+            <h3>A CNN (YOLO-V2) Object Detector</h3>
+            <a href="images/roma.jpg" title="view larger"><img src="images/roma.jpg"
+                                                               style="border-style: none ;width:45%;min-width: 150px ; margin-bottom: 5px"></a>
+            <a href="images/maradona.jpg" title="view larger"><img src="images/maradona.jpg"
+                                                                   style="border-style: none; width:45% ;min-width: 150px ; margin-bottom: 5px"></a>
+
+        </div>
+    </div>
+    <div class="projects row" style="padding-top: 5px">
+        <div class="col-md-12">
+            <div class="project">
+                <p>A Convolutional Neural Network of YOLO-V2 architecture pretrained on COCO Dataset, performs object
+                    detection
+                    for 80 classes. Ported in Keras from DarkNet. Developed as part of the deeplearning.ai 's
+                    specialization on
+                    <a href="https://www.coursera.org/specializations/deep-learning" target="_blank">Deep Learning</a>
+                    offered on Coursera.</p>
+                Yolo Papers:
+                <a href="https://arxiv.org/pdf/1506.02640.pdf" target="_blank">1</a>,
+                <a href="https://arxiv.org/pdf/1612.08242.pdf" target="_blank">2</a> |
+                <a href="https://github.com/GiannisMitr/CNN-YOLO-V2-Object-Detection" target="_blank">Repo</a> |
+                <a href="https://www.coursera.org/account/accomplishments/specialization/D2XH7SJGD4UJ" target="_blank">Certificate</a>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="row justify-content-center projects">
+        <div class="col-md-6 col-sm-9 col-xs-9 text-center project">
+            <h3>CNN Neural Style Transfer</h3>
+            <img src="images/style-transfer.jpg"
+                 style="border-style: none ; max-width:100%; height: auto; margin-bottom: -10px">
+        </div>
+    </div>
+    <div class="projects row">
+        <div class="col-md-12">
+            <div class="project">
+                <p>A convolutional neural network performing style transfer between two images. Implemented with
+                    tensorflow,
+                    uses a <a href="https://arxiv.org/pdf/1409.1556.pdf" target="_blank">VGG-19</a> network <a
+                            href="http://www.vlfeat.org/matconvnet/pretrained/" target="_blank">pretrained</a> on
+                    ImageNet Dataset. Developed as part of the deeplearning.ai 's specialization on
+                    <a href="https://www.coursera.org/specializations/deep-learning" target="_blank">Deep Learning</a>
+                    offered on Coursera.
+                </p>
+                <a href="https://arxiv.org/pdf/1508.06576.pdf" target="_blank">Paper</a> |
+                <a href="https://github.com/GiannisMitr/CNN-Neural-Style-Transfer" target="_blank">Repo</a> |
+                <a href="https://www.coursera.org/account/accomplishments/specialization/D2XH7SJGD4UJ" target="_blank">Certificate</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

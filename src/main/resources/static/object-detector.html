@@ -1,0 +1,115 @@
+<!doctype html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2/dist/tf.min.js"></script>
+    <script src="js/edge-cnn.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <title>Giannis Mitropoulos</title>
+ <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+  <link href="style/style.css" rel="stylesheet" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79898955-2"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-79898955-2');
+  </script>
+
+
+
+</head>
+
+<body>
+<noscript>
+    You need to enable JavaScript to run this app.
+</noscript>
+  <div class="container container-fluid">
+    <div class="row">
+            <div class="col-md-12">
+                <h2 style="margin-top:  10px">Object Detection & Person Segmentation in the Browser</h2>
+                <a href="/" title="Home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                    <span style="vertical-align: middle">Home</span>
+                </a>
+                <div id="vid-cont" style="position: relative; width: 640px ; margin: auto; height: 550px">
+                    <p id="webcam-support" style="display: none;color: red">No webcam support found for this device. If you are using
+                        an IOS device try using Safari browser.</p>
+                    <div id="discl">
+                        <button onclick="init()" style="margin: 10px">Enable Camera</button>
+                        <p>This module runs inference in your browser using TensorFlow.js library
+                            and web camera images as input.<br>
+                            By clicking <i>"Enable Camera"</i>, access to your camera will be requested.<br>
+                            Images are <span style="font-weight: bold">NOT</span> sent to a server or stored in any way.<br>
+                            You can review the source code of the page <a href="https://github.com/GiannisMitr/personal-site" target="_blank">here</a>.</p>
+                    </div>
+
+                    <video id="vid"
+                            class="vidPinned"
+                            autoPlay
+                            playsInline
+                            muted
+                            width="640"
+                            height="480"
+                            style="display: none"
+
+                    > </video>
+                    <canvas
+                            id="canvas"
+                            class="vidPinned"
+                            width="640"
+                            height="480"
+                            style="display: none"
+
+                    ></canvas>
+
+                </div>
+                <hr>
+                <div>
+                    <input type="radio" id="object" name="pred" value="Object Detection"
+                           checked onchange="onRadioChange()">
+                    <label for="object" style="margin-right: 5px">Object Detection</label>
+                    <span>&nbsp;&nbsp;</span>
+                    <input type="radio" id="person" name="pred" value="Person Segmentation" onchange="onRadioChange()">
+                    <label for="person">Person Segmentation</label>
+                </div>
+                <div id="person-options" style="display: none">
+                    <input type="checkbox" name="skeleton" id="skeleton">
+                    <label for="skeleton"> Draw keypoints skeleton</label>
+                </div>
+
+
+            </div>
+
+
+    </div>
+
+      <div class="row projects">
+          <div class="col-md-12 project">
+              <p id="object-desc">
+                  Uses a <a href="https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd" target="_blank">COCO-SSD</a> model ported for TensorFlow.js library.
+                  As an encoder it uses a lite version of <a href="https://ai.googleblog.com/2018/04/mobilenetv2-next-generation-of-on.html" target="_blank">MobileNetV2</a>
+                  and an <a href="https://arxiv.org/pdf/1512.02325.pdf" target="_blank">SSD</a> network (Single Shot Detector) as the decoder.
+                  The model outputs predictions for 90 classes of the <a href="http://cocodataset.org/#home" target="_blank">COCO</a> dataset
+                  and coordinates for the predicted boxes. The predictions are drawn to a canvas element
+                  overlayed over the video. <br>You can view the code <a href="https://github.com/GiannisMitr/personal-site" target="_blank">here</a>.
+              </p>
+              <p id="person-desc" style="display: none">
+                  Uses a <a href="https://github.com/tensorflow/tfjs-models/tree/master/body-pix" target="_blank">BodyPix</a> model ported for TensorFlow.js library.
+                  It uses a <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md" target="_blank">MobileNetV1</a>
+                  with an algorithm described <a href="https://blog.tensorflow.org/2019/11/updated-bodypix-2.html" target="_blank">here</a>
+                  that outputs a segmentation mask for 24 body parts. The mask is drawn using helper functions provided with the model.
+                 You can view the code <a href="https://github.com/GiannisMitr/personal-site" target="_blank">here</a>.
+
+              </p>
+          </div>
+      </div>
+  </div>
+
+
+</body></html>
